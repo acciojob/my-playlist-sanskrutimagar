@@ -1,16 +1,121 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Playlist</title>
+    <style>
+        /* === Page Styling === */
+        body {
+            background-color: rgb(204, 204, 204);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* === Headings === */
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* === Playlist Box === */
+        .playlist-box {
+            background-color: white;
+            width: 40%;
+            margin: 20px auto;
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        li {
+            list-style-type: none;
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+
+        /* === Player Containers === */
+        .player-container {
+            background-color: rgb(255, 255, 255);
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        video, audio {
+            width: 90%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* === Links === */
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: darkred;
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <!-- Main Heading -->
+    <h1>My Playlist</h1>
+
+    <!-- Songs Playlist -->
+    <div class="playlist-box">
+        <ul>
+            <li><a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" target="_blank">Song 1</a></li>
+            <li><a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" target="_blank">Song 2</a></li>
+            <li><a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" target="_blank">Song 3</a></li>
+            <li><a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" target="_blank">Song 4</a></li>
+            <li><a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" target="_blank">Song 5</a></li>
+        </ul>
+    </div>
+
+    <!-- Now Playing Section -->
+    <h2>Now Playing...</h2>
+
+    <!-- Video Player -->
+    <div class="player-container player_one">
+        <video controls>
+            <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- MP3 Section -->
+    <h2>MP3 songs</h2>
+
+    <!-- Audio Player -->
+    <div class="player-container player_two">
+        <p>Maan Meri Jaan</p>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
 </body>
-
 </html>
